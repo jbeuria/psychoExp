@@ -21,7 +21,7 @@ export async function load({ params,url,fetch }) {
   })
   let resp2= await res2.json();
   
-  console.log(resp2);
+  //console.log(resp2);
 
     return {
       post: {
