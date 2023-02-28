@@ -12,6 +12,7 @@ const getStores = () => {
   };
 };
 const page = {
+  /** @param {(value: any) => void} fn */
   subscribe(fn) {
     const store = getStores().page;
     return store.subscribe(fn);

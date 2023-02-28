@@ -4,12 +4,11 @@ export const manifest = {
 	assets: new Set(["favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-f972fec7.js","imports":["_app/immutable/start-f972fec7.js","_app/immutable/chunks/index-7f3551f2.js","_app/immutable/chunks/singletons-c1916556.js"],"stylesheets":[],"fonts":[]},
+		entry: {"file":"_app/immutable/start-9a664b67.js","imports":["_app/immutable/start-9a664b67.js","_app/immutable/chunks/index-65bc829e.js","_app/immutable/chunks/singletons-efdfcb03.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
-			() => import('./nodes/2.js'),
-			() => import('./nodes/3.js')
+			() => import('./nodes/2.js')
 		],
 		routes: [
 			{
@@ -18,27 +17,6 @@ export const manifest = {
 				params: [],
 				page: { layouts: [0], errors: [1], leaf: 2 },
 				endpoint: null
-			},
-			{
-				id: "/about",
-				pattern: /^\/about\/?$/,
-				params: [],
-				page: { layouts: [0], errors: [1], leaf: 3 },
-				endpoint: null
-			},
-			{
-				id: "/api/records",
-				pattern: /^\/api\/records\/?$/,
-				params: [],
-				page: null,
-				endpoint: () => import('./entries/endpoints/api/records/_server.js')
-			},
-			{
-				id: "/api/user",
-				pattern: /^\/api\/user\/?$/,
-				params: [],
-				page: null,
-				endpoint: () => import('./entries/endpoints/api/user/_server.js')
 			}
 		],
 		matchers: async () => {
