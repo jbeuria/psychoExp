@@ -70,6 +70,7 @@ function create_ssr_component(fn) {
     const $$ = {
       on_destroy,
       context: new Map(context || (parent_component ? parent_component.$$.context : [])),
+      // these will be immediately discarded
       on_mount: [],
       before_update: [],
       after_update: [],
@@ -91,6 +92,7 @@ function create_ssr_component(fn) {
         css: {
           code: Array.from(result.css).map((css) => css.code).join("\n"),
           map: null
+          // TODO
         },
         head: result.title + result.head
       };
@@ -99,13 +101,13 @@ function create_ssr_component(fn) {
   };
 }
 export {
-  safe_not_equal as a,
+  setContext as a,
   subscribe as b,
   create_ssr_component as c,
   escape as e,
   getContext as g,
   missing_component as m,
   noop as n,
-  setContext as s,
+  safe_not_equal as s,
   validate_component as v
 };
